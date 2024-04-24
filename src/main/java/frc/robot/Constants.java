@@ -23,7 +23,7 @@ public final class Constants {
 
   public static final class driveConstants {
     //Speed Constraints
-    public static final double maxSpd = 0.0;
+    public static final double maxSpd = 0.0; // IN METERS
     public static final double maxTurnSpeed = Math.PI * 2; //Radians per second, rotates a full circle in a second at base.
 
     //Chassis Information
@@ -38,7 +38,29 @@ public final class Constants {
       new Translation2d(-wheelWidth/2, -wheelLength/2) //Bottom left facing forward
     );
 
+    //Angular Offsets (In Radians)
+    public static final double topRAngleOffset = Math.PI/4;
+    public static final double topLAngleOffset = (3*Math.PI)/4;
+    public static final double botRAngleOffset = -Math.PI/4;
+    public static final double botLAngleOffset = (3*Math.PI)/4;
+
   }
+  public static final class CANIDs {
+      ////Wheels
+      //Top right
+      public static final int topRightDrivePort = 1;
+      public static final int topRightTurnPort = 2;
+      //Top left
+      public static final int topLeftDrivePort = 3;
+      public static final int topLeftTurnPort = 4;
+      //Bottom right
+      public static final int bottomRightDrivePort = 5;
+      public static final int bottomRightTurnPort = 6;
+      //Bottom left
+      public static final int bottomleftDrivePort = 7;
+      public static final int bottomLeftTurnPort = 8;
+  }
+
   public static class OperatorConstants {
     public static final int kDriverControllerPort = 0;
   }
